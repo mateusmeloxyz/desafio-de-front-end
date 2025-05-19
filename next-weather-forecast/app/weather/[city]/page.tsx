@@ -9,9 +9,9 @@ interface PageProps {
   };
 }
 
-export default function CityWeatherPage({ params }: PageProps) {
+export default async function CityWeatherPage({ params }: PageProps) {
   // Decode the city parameter (replace %20 with spaces, etc.)
-  const city = decodeURIComponent(params.city);
+  const city = await decodeURIComponent(params.city);
 
   // If city is empty, redirect to 404
   if (!city) {
@@ -21,7 +21,7 @@ export default function CityWeatherPage({ params }: PageProps) {
   return (
     <div className="min-h-screen p-8">
       <main className="flex flex-col items-center justify-center">
-        <Link 
+        <Link
           href="/"
           className="mb-4 text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
         >
