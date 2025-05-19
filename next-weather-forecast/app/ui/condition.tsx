@@ -1,34 +1,30 @@
-import React from "react";
-import Image from "next/image";
-import { getIconForCondition } from "@/app/lib/utils";
+import ConditionIcon from "./conditionIcon";
+import { getTimeOfDay } from "@/app/lib/utils";
 
-// Type definition for our props
 interface ConditionProps {
-  conditionCode: number;
-  isDay?: boolean;
-  size?: number;
-  className?: string;
+  data: {
+    time: string;
+    temp_c: number;
+    condition: {
+      code: number;
+    };
+    is_day: boolean;
+  };
 }
 
-const Condition: React.FC<ConditionProps> = ({
-  conditionCode,
-  isDay = true,
-  size = 24,
-  className = "",
-}) => {
-  const iconName = getIconForCondition(conditionCode, isDay);
-  const iconPath = `/icons/${iconName}.svg`;
-
+const Condition: React.FC<ConditionProps> = ({ data }) => {
+  const timeOfDay = getTimeOfDay(data.time);
   return (
-    <div className={`weather-condition ${className}`}>
-      <div className="relative w-full h-full dark:invert">
-        <Image
-          src={iconPath}
-          alt={`Weather condition: ${iconName}`}
-          width={size}
-          height={size}
-          className="transition-colors"
+    <div className="flex flex-col items-center justify-center">
+      <p>{timeOfDay}</p>
+      <div className="items-center justify-center mb-4">
+        <ConditionIcon
+          conditionCode={data.condition.code}
+          isDay={data.is_day}
+          size={24}
+          className="mr-4"
         />
+        <div className="text-xl font-semibold">{data.temp_c}°C</div>
       </div>
     </div>
   );
