@@ -22,7 +22,7 @@ export default function Home() {
           width={143}
           height={143}
           alt="Globe icon showing americas"
-          className="transition-colors"
+          className="transition-colors dark:invert-[15%] invert-[85%]"
         />
         <div className="flex space-x-2">
           {cities.map((city) => (
