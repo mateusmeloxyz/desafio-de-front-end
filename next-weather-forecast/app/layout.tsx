@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["300"],
 });
 
 export const metadata: Metadata = {

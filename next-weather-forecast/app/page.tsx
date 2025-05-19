@@ -15,14 +15,14 @@ export default function Home() {
   return (
     <div className="min-h-screen p-8">
       <main className="flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-bold mb-4">Weather</h1>
-        <h2 className="text-xl mb-6">Select a City</h2>
+        <h1 className="text-5xl/[120%] mb-1 font-light">Weather</h1>
+        <h2 className="text-xl mb-8">Select a City</h2>
         <Image
           src="/icons/la_globe-americas.svg"
           width={143}
           height={143}
           alt="Globe icon showing americas"
-          className="transition-colors dark:invert-[15%] invert-[85%]"
+          className="transition-colors dark:invert-[1%] invert-[99%]"
         />
         <div className="flex space-x-2">
           {cities.map((city) => (
