@@ -9,7 +9,7 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
 - [x] Define NextJs Install prompts
 - [x] Run NextJs Install and start blank project or start with a template
 - [x] Host on Vercel
-- [ ] Make a simple API test fetching a single city weather
+- [x] Make a simple API test fetching a single city weather
 - [ ] Adjust fetch to dinamically fetch any city
 - [ ] Make unit testing
 - [ ] Build weather forecast Page Layout with preview mock data
@@ -21,7 +21,7 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
   - [ ] build tablet layout version
 - [ ] Add fetch data to layout
   - [ ] Dinamically alter icons based on fetch data
-- [ ] Create city select page
+- [ ] Create city select page - [NextJs docs - Dynamic Routes](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)
   - [ ] mobile version
   - [ ] desktop version
   - [ ] tablet version
