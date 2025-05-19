@@ -19,17 +19,17 @@ export default function Home() {
         <h2 className="text-xl mb-8">Select a City</h2>
         <Image
           src="/icons/la_globe-americas.svg"
-          width={143}
-          height={143}
+          width={176}
+          height={176}
           alt="Globe icon showing americas"
-          className="transition-colors dark:invert-[1%] invert-[99%]"
+          className="transition-colors dark:invert-[1%] invert-[99%] mb-8"
         />
-        <div className="flex space-x-2">
+        <div className="grid grid-cols-3 space-x-2">
           {cities.map((city) => (
             <Link
               key={city}
               href={`/weather/${encodeURIComponent(city)}`}
-              className="py-2 px-4 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-center"
+              className="py-2 px-4 text-xl font-normal rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-center"
             >
               {city}
             </Link>
