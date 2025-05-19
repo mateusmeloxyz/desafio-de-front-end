@@ -10,25 +10,30 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
 - [x] Run NextJs Install and start blank project or start with a template
 - [x] Host on Vercel
 - [x] Make a simple API test fetching a single city weather
-- [ ] Adjust fetch to dinamically fetch any city
+- [x] Adjust fetch to dinamically fetch any city
 - [ ] Make unit testing
 - [ ] Build weather forecast Page Layout with preview mock data
   - [ ] Build mobile layout
-    - [ ] Create static HTML structure
-    - [ ] Add styles
-    - [ ] Create components where needed (All consumable content)
+    - [x] Create static HTML structure
+    - [x] Add styles
+    - [x] Create components where needed (All consumable content)
   - [ ] build desktop layout version
   - [ ] build tablet layout version
-- [ ] Add fetch data to layout
-  - [ ] Dinamically alter icons based on fetch data
-- [ ] Create city select page - [NextJs docs - Dynamic Routes](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)
+- [x] Add fetch data to layout
+  - [x] Dinamically alter icons based on fetch data
+- [x] Create city select page - [NextJs docs - Dynamic Routes](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)
   - [ ] mobile version
   - [ ] desktop version
   - [ ] tablet version
-- [ ] Dinamicaly fetch city data based on city select click
+- [x] Dinamicaly fetch city data based on city select click
 - [ ] Make dawn, morning, afternoon and night fetch be server side rendered with serialization
 - [ ] Apply PPR (Partiual Prerendering)
 - [ ] Put everything on a docker container
+- [ ] Layout Adjustments for the whole application
+  - [ ] mobile
+  - [ ] Desktop
+  - [ ] tablet
+- [ ] Fix vercel deployment
 
 ### Further improvements
 

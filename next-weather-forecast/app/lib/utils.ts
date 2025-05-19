@@ -106,3 +106,38 @@ export const getIconForCondition = (
 
   return iconName;
 };
+
+/**
+ * Converts wind speed from kilometers per hour (km/h) to meters per second (m/s)
+ * Formula: 1 km/h = 0.277778 m/s
+ * 
+ * @param kmh - Wind speed in kilometers per hour
+ * @returns - Wind speed in meters per second, rounded to 2 decimal places
+ */
+export const kmhToMs = (kmh: number): number => {
+  // Conversion factor: 1 km/h = 0.277778 m/s
+  const conversionFactor = 0.277778;
+  return Number((kmh * conversionFactor).toFixed(2));
+};
+
+/**
+ * Determines the time of day based on the hour in a datetime string
+ * 
+ * @param dateTimeStr - Datetime string in format "YYYY-MM-DD HH:MM"
+ * @returns Time of day: "dawn", "morning", "afternoon", or "night"
+ */
+export const getTimeOfDay = (dateTimeStr: string): string => {
+  // Parse the hour from the datetime string
+  const hour = parseInt(dateTimeStr.split(' ')[1].split(':')[0], 10);
+  
+  // Determine time of day based on hour ranges
+  if (hour >= 0 && hour < 6) {
+    return "dawn";
+  } else if (hour >= 6 && hour < 12) {
+    return "morning";
+  } else if (hour >= 12 && hour < 18) {
+    return "afternoon";
+  } else {
+    return "night";
+  }
+};
