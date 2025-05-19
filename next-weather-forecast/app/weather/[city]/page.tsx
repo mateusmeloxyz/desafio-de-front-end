@@ -4,14 +4,15 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     city: string;
-  };
+  }>;
 }
 
 export default async function CityWeatherPage({ params }: PageProps) {
   // Decode the city parameter (replace %20 with spaces, etc.)
-  const city = await decodeURIComponent(params.city);
+  const data = await params; // first await for params to be able to use them
+  const city = decodeURIComponent(data.city);
 
   // If city is empty, redirect to 404
   if (!city) {
