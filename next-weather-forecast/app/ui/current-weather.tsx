@@ -81,7 +81,7 @@ export default async function CurrentWeather({
           <Condition data={data.forecast.forecastday[0].hour[21]} />
         </div>
 
-        <div className="grid grid-cols-2 gap-2 mt-4 text-sm">
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-2 mt-4 text-sm">
           <p>Wind speed {kmhToMs(data.current.wind_kph)} m/s</p>
           <p>Sunrise {data.forecast.forecastday[0].astro.sunrise}</p>
           <p>Sunset {data.forecast.forecastday[0].astro.sunset}</p>
