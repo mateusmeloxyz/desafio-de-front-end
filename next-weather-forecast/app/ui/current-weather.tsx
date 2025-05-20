@@ -50,7 +50,7 @@ export default async function CurrentWeather({
         </h1>
         <p className="text-2xl/[120%] mb-6">{data.current.condition.text}</p>
 
-        <div className="flex items-center justify-center mb-4 flex-col">
+        <div className="flex items-center justify-center mb-6 flex-col">
           <div className="flex items-stretch justify-around gap-2 h-36 w-48 mb-6">
             <div className="text-9xl/[120%] font-extralight">
               {data.current.temp_c.toFixed(0)}
@@ -74,7 +74,7 @@ export default async function CurrentWeather({
             className=""
           />
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-6">
           <Condition data={data.forecast.forecastday[0].hour[3]} />
           <Condition data={data.forecast.forecastday[0].hour[9]} />
           <Condition data={data.forecast.forecastday[0].hour[15]} />

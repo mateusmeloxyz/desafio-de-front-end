@@ -34,6 +34,7 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
   - [ ] Desktop
   - [ ] tablet
 - [x] Fix vercel deployment
+- [ ] Add grey/blue background to light theme
 
 ### Further improvements
 
