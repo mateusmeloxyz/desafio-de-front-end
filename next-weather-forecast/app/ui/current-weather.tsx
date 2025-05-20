@@ -82,21 +82,23 @@ export default async function CurrentWeather({
           <Condition data={data.forecast.forecastday[0].hour[21]} />
         </div>
 
-        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-2 mt-4">
-          <WeatherMetadataItem 
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-y-4 mt-4 divide-x-2 max-md:divide-none divide-[#DFE4EA] text-xl/[120%]">
+          <WeatherMetadataItem
             metadata="Wind speed"
             data={kmhToMs(data.current.wind_kph)}
             unit="m/s"
+            className="border-r-2 border-[#DFE4EA] border-solid"
           />
-          <WeatherMetadataItem 
+          <WeatherMetadataItem
             metadata="Sunrise"
             data={data.forecast.forecastday[0].astro.sunrise}
           />
-          <WeatherMetadataItem 
+          <WeatherMetadataItem
             metadata="Sunset"
             data={data.forecast.forecastday[0].astro.sunset}
+            className="border-r-2 border-[#DFE4EA] border-solid"
           />
-          <WeatherMetadataItem 
+          <WeatherMetadataItem
             metadata="Humidity"
             data={data.current.humidity}
             unit="%"

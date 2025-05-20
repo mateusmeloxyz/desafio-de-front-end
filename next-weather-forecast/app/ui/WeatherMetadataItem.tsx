@@ -14,9 +14,12 @@ const WeatherMetadataItem: React.FC<WeatherMetadataItemProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`weather-metadata-item ${className}`}>
-      <p className="text-sm">
-        {metadata} {data}
+    <div
+      className={`weather-metadata-item ${className} text-center pl-4 pr-4 text-xl`}
+    >
+      <p>{metadata} </p>
+      <p>
+        {data}
         {unit && ` ${unit}`}
       </p>
     </div>

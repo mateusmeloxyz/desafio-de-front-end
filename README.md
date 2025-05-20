@@ -12,13 +12,13 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
 - [x] Make a simple API test fetching a single city weather
 - [x] Adjust fetch to dinamically fetch any city
 - [ ] Make unit testing
-- [ ] Build weather forecast Page Layout with preview mock data
-  - [ ] Build mobile layout
+- [x] Build weather forecast Page Layout with preview mock data
+  - [x] Build mobile layout
     - [x] Create static HTML structure
     - [x] Add styles
     - [x] Create components where needed (All consumable content)
-  - [ ] build desktop layout version
-  - [ ] build tablet layout version
+  - [x] build desktop layout version
+  - [x] build tablet layout version
 - [x] Add fetch data to layout
   - [x] Dinamically alter icons based on fetch data
 - [x] Create city select page - [NextJs docs - Dynamic Routes](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)
@@ -29,18 +29,20 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
 - [ ] Make dawn, morning, afternoon and night fetch be server side rendered with serialization
 - [ ] Apply PPR (Partiual Prerendering)
 - [ ] Put everything on a docker container
-- [ ] Layout Adjustments for the whole application
-  - [ ] mobile
-  - [ ] Desktop
-  - [ ] tablet
+- [x] Layout Adjustments for the whole application
+  - [x] mobile
+  - [x] Desktop
+  - [x] tablet
 - [x] Fix vercel deployment
-- [ ] Add grey/blue background to light theme
+- [x] Add grey/blue background to light theme
+- [ ] Use grid layout for the whole page
 
 ### Further improvements
 
 - [ ] Add current city time to city weather forecast screen
 - [ ] Create fallback fetch that is triggered if the first weather API service is down for some reason
 - [ ] Creat option to search for city on main page
+- [ ] Dynamicaly change background color based on current weather information (eg: blue for clear skies, grey for cloudy, etc)
 
 ## Sugestões de APIs
 
