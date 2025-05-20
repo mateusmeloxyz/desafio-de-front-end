@@ -22,9 +22,9 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
 - [x] Add fetch data to layout
   - [x] Dinamically alter icons based on fetch data
 - [x] Create city select page - [NextJs docs - Dynamic Routes](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)
-  - [ ] mobile version
-  - [ ] desktop version
-  - [ ] tablet version
+  - [x] mobile version
+  - [x] desktop version
+  - [x] tablet version
 - [x] Dinamicaly fetch city data based on city select click
 - [ ] Make dawn, morning, afternoon and night fetch be server side rendered with serialization
 - [ ] Apply PPR (Partiual Prerendering)
@@ -33,7 +33,7 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
   - [ ] mobile
   - [ ] Desktop
   - [ ] tablet
-- [ ] Fix vercel deployment
+- [x] Fix vercel deployment
 
 ### Further improvements
 

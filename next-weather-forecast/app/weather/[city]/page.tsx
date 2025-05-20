@@ -22,13 +22,13 @@ export default async function CityWeatherPage({ params }: PageProps) {
   return (
     <div className="min-h-screen p-8">
       <main className="flex flex-col items-center justify-center">
+        <CurrentWeather city={city} />
         <Link
           href="/"
           className="mb-4 text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
         >
           ← Back to City Selection
         </Link>
-        <CurrentWeather city={city} />
       </main>
     </div>
   );
