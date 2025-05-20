@@ -4,30 +4,30 @@ export const getIconForCondition = (
   isDay: boolean = true,
 ): string => {
   // Default icon if no match is found
-  let iconName = "BsCloudFill";
+  let iconName = "BsClouds";
 
   switch (conditionCode) {
     // Sunny / Clear
     case 1000:
-      iconName = isDay ? "BsBrightnessHighFill" : "BsMoonFill";
+      iconName = isDay ? "BsSun" : "BsMoon";
       break;
 
     // Partly cloudy
     case 1003:
-      iconName = isDay ? "BsCloudSunFill" : "BsCloudMoonFill";
+      iconName = isDay ? "BsCloudSun" : "BsCloudMoon";
       break;
 
     // Cloudy
     case 1006:
     case 1009:
-      iconName = "BsCloudFill";
+      iconName = "BsClouds";
       break;
 
     // Mist / Fog / Freezing fog
     case 1030:
     case 1135:
     case 1147:
-      iconName = "BsCloudFogFill";
+      iconName = "BsCloudFog";
       break;
 
     // Rain / Drizzle
@@ -37,7 +37,7 @@ export const getIconForCondition = (
     case 1180:
     case 1183:
     case 1240:
-      iconName = "BsCloudDrizzleFill";
+      iconName = "BsCloudDrizzle";
       break;
 
     // Moderate to heavy rain
@@ -47,7 +47,7 @@ export const getIconForCondition = (
     case 1195:
     case 1243:
     case 1246:
-      iconName = "BsCloudRainFill";
+      iconName = "BsCloudRain";
       break;
 
     // Snow
@@ -60,7 +60,7 @@ export const getIconForCondition = (
     case 1225:
     case 1255:
     case 1258:
-      iconName = "BsCloudSnowFill";
+      iconName = "BsCloudSnow";
       break;
 
     // Sleet
@@ -69,7 +69,7 @@ export const getIconForCondition = (
     case 1207:
     case 1249:
     case 1252:
-      iconName = "BsCloudSleetFill";
+      iconName = "BsCloudSleet";
       break;
 
     // Freezing rain / ice
@@ -81,7 +81,7 @@ export const getIconForCondition = (
     case 1237:
     case 1261:
     case 1264:
-      iconName = "BsCloudHailFill";
+      iconName = "BsCloudHail";
       break;
 
     // Thunder
@@ -90,18 +90,18 @@ export const getIconForCondition = (
     case 1276:
     case 1279:
     case 1282:
-      iconName = "BsCloudLightningFill";
+      iconName = "BsCloudLightning";
       break;
 
     // Blowing snow / Blizzard
     case 1114:
     case 1117:
-      iconName = "BsCloudSnowFill";
+      iconName = "BsCloudSnow";
       break;
 
     default:
       // If we don't have a specific mapping, use a generic icon based on day/night
-      iconName = isDay ? "BsCloudFill" : "BsCloudMoonFill";
+      iconName = isDay ? "BsCloud" : "BsCloudMoon";
   }
 
   return iconName;
@@ -110,7 +110,7 @@ export const getIconForCondition = (
 /**
  * Converts wind speed from kilometers per hour (km/h) to meters per second (m/s)
  * Formula: 1 km/h = 0.277778 m/s
- * 
+ *
  * @param kmh - Wind speed in kilometers per hour
  * @returns - Wind speed in meters per second, rounded to 2 decimal places
  */
@@ -122,14 +122,14 @@ export const kmhToMs = (kmh: number): number => {
 
 /**
  * Determines the time of day based on the hour in a datetime string
- * 
+ *
  * @param dateTimeStr - Datetime string in format "YYYY-MM-DD HH:MM"
  * @returns Time of day: "dawn", "morning", "afternoon", or "night"
  */
 export const getTimeOfDay = (dateTimeStr: string): string => {
   // Parse the hour from the datetime string
-  const hour = parseInt(dateTimeStr.split(' ')[1].split(':')[0], 10);
-  
+  const hour = parseInt(dateTimeStr.split(" ")[1].split(":")[0], 10);
+
   // Determine time of day based on hour ranges
   if (hour >= 0 && hour < 6) {
     return "dawn";
