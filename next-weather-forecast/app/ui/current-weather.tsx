@@ -44,7 +44,7 @@ export default async function CurrentWeather({
     }
 
     return (
-      <div className="flex flex-col items-center p-6 rounded-lg shadow-md">
+      <div className="flex flex-col items-center p-6 rounded-lg">
         <h1 className="text-5xl/[120%] font-light mb-1">
           {data.location.name}
         </h1>
