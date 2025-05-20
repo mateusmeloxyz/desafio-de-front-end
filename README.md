@@ -36,6 +36,8 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
 - [x] Fix vercel deployment
 - [x] Add grey/blue background to light theme
 - [ ] Use grid layout for the whole page
+- [ ] Investigate why font weight is not being applied correctly
+- [ ] Improve figma fidelity regarding element sizes (check why sizes look different than figma despite copying values from there)
 
 ### Further improvements
 
