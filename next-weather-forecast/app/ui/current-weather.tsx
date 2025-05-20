@@ -1,6 +1,7 @@
 import React from "react";
 import Condition from "@/app/ui/condition";
 import ConditionIcon from "@/app/ui/conditionIcon";
+import WeatherMetadataItem from "@/app/ui/WeatherMetadataItem";
 import { kmhToMs } from "../lib/utils";
 
 interface CurrentWeatherProps {
@@ -50,7 +51,7 @@ export default async function CurrentWeather({
         </h1>
         <p className="text-2xl/[120%] mb-6">{data.current.condition.text}</p>
 
-        <div className="flex items-center justify-center mb-4 flex-col">
+        <div className="flex items-center justify-center mb-6 flex-col">
           <div className="flex items-stretch justify-around gap-2 h-36 w-48 mb-6">
             <div className="text-9xl/[120%] font-extralight">
               {data.current.temp_c.toFixed(0)}
@@ -74,18 +75,34 @@ export default async function CurrentWeather({
             className=""
           />
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-6">
           <Condition data={data.forecast.forecastday[0].hour[3]} />
           <Condition data={data.forecast.forecastday[0].hour[9]} />
           <Condition data={data.forecast.forecastday[0].hour[15]} />
           <Condition data={data.forecast.forecastday[0].hour[21]} />
         </div>
 
-        <div className="grid grid-cols-2 gap-2 mt-4 text-sm">
-          <p>Wind speed {kmhToMs(data.current.wind_kph)} m/s</p>
-          <p>Sunrise {data.forecast.forecastday[0].astro.sunrise}</p>
-          <p>Sunset {data.forecast.forecastday[0].astro.sunset}</p>
-          <p>Humidity {data.current.humidity}%</p>
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-y-4 mt-4 divide-x-2 max-md:divide-none divide-[#DFE4EA] text-xl/[120%]">
+          <WeatherMetadataItem
+            metadata="Wind speed"
+            data={kmhToMs(data.current.wind_kph)}
+            unit="m/s"
+            className="border-r-2 border-[#DFE4EA] border-solid"
+          />
+          <WeatherMetadataItem
+            metadata="Sunrise"
+            data={data.forecast.forecastday[0].astro.sunrise}
+          />
+          <WeatherMetadataItem
+            metadata="Sunset"
+            data={data.forecast.forecastday[0].astro.sunset}
+            className="border-r-2 border-[#DFE4EA] border-solid"
+          />
+          <WeatherMetadataItem
+            metadata="Humidity"
+            data={data.current.humidity}
+            unit="%"
+          />
         </div>
       </div>
     );

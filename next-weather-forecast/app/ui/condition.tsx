@@ -15,16 +15,16 @@ interface ConditionProps {
 const Condition: React.FC<ConditionProps> = ({ data }) => {
   const timeOfDay = getTimeOfDay(data.time);
   return (
-    <div className="flex flex-col items-center justify-center">
-      <p>{timeOfDay}</p>
-      <div className="items-center justify-center mb-4">
+    <div className="flex flex-col items-center justify-center min-w-24">
+      <p className="text-xl/[120%] font-extralight mb-4">{timeOfDay}</p>
+      <div className="mb-4">
         <ConditionIcon
           conditionCode={data.condition.code}
           isDay={data.is_day}
-          size={24}
-          className="mr-4"
+          size={48}
+          className="mb-4"
         />
-        <div className="text-xl font-semibold">{data.temp_c}°C</div>
+        <div className="text-xl font-semibold">{data.temp_c.toFixed(0)}°C</div>
       </div>
     </div>
   );
